@@ -116,10 +116,10 @@ library(syuzhet)
 # Converting tweets to ASCII to trackle strange characters
 tweets <- iconv(Bill_tweets, from="UTF-8", to="ASCII", sub="")
 
-# removing retweets, in case needed 
+# Removing retweets, in case needed 
 tweets <-gsub("(RT|via)((?:\\b\\w*@\\w+)+)","",Bill_tweets)
 
-# removing mentions, in case needed
+# Removing mentions, in case needed
 tweets <-gsub("@\\w+","",Bill_tweets)
 ew_sentiment<-get_nrc_sentiment((Bill_tweets))
 sentimentscores<-data.frame(colSums(ew_sentiment[,]))
@@ -139,7 +139,7 @@ library(ggplot2)
 library(tidytext)
 library(tidyverse)
 
-  #Most retweeted tweet
+# Most retweeted tweet
 Susan_tweets %>% 
   arrange(-retweet_count) %>%
   slice(1) %>% 
