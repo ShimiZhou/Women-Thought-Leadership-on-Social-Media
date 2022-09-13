@@ -4,10 +4,10 @@ install.packages("twitteR")
 library(twitteR)
 appname <- "Women Thought Leadership"
 # store api keys 
-api_key <- "Qj2qpRYtvbBE55s4JeFBCn3uf"
-api_secret_key <- "aFCw2PLqPWm4BoxyMMBM4sONmgW0vGebpnMeTSiKuCsoC5Vxoe"
-access_token <- "890062639455498241-1dk3dQzl7F9utdU7YAmtOfno40a3gBe"
-access_token_secret <- "bM5n00TNCny6Wa9Q1q6fEyf0j0SbyI0rmipzeHmMn6VA1"
+api_key <- "####"
+api_secret_key <- "####"
+access_token <- "####"
+access_token_secret <- "####"
 
 # Searching for tweets: can only extract from the past 6 to 9 days, the last 3200 tweets
 Susan_tweets <- get_timeline("@SusanWojcicki", n= 3200)
