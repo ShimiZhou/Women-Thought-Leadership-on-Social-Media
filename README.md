@@ -149,12 +149,13 @@ Susan_tweets %>%
     sample_n(5) %>%
     select(created_at, text, favorite_count, retweet_count)
 
-  # Converting tweets to ASCII to trackle strange characters
+# Converting tweets to ASCII to trackle strange characters
   tweets <- iconv(tweets, from="UTF-8", to="ASCII", sub="")
-  # removing retweets, in case needed 
+
+# removing retweets, in case needed 
   tweets <-gsub("(RT|via)((?:\\b\\w*@\\w+)+)","",tweets)
   
-  # Removing mentions, in case needed
+# Removing mentions, in case needed
   tweets <-gsub("@\\w+","",tweets)
   ew_sentiment<-get_nrc_sentiment((tweets))
   sentimentscores<-data.frame(colSums(ew_sentiment[,]))
